@@ -4,8 +4,8 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Book = require('../models/book');
 
-mongoose.connect('mongodb://localhost/bookCollection');
-
+mongoose.connect('process.env.DB');
+// DB=mongodb://localhost/test node bin/www
 var db = mongoose.connection;
 
 // check for errors on database connection
